@@ -10,9 +10,13 @@
     "fire"
  ]
 
- var answerWord = words[Math.floor(Math.random() * words.length)];
+ var word = words[Math.floor(Math.random() * words.length)];
 
- console.log(answerWord);
+ console.log(word);
+var answer = [];
+for (var i = 0; i < answer.length; i++) {
+   answer[i] = "_";
+}
 
 var letter = prompt("Word chosen. Please choose a letter");
 
