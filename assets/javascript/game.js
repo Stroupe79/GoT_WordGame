@@ -13,3 +13,7 @@
  var answerWord = words[Math.floor(Math.random() * words.length)];
 
  console.log(answerWord);
+
+var letter = prompt("Word chosen. Please choose a letter");
+
+
