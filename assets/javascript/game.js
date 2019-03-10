@@ -38,19 +38,26 @@ document.onkeyup = function(loop) {
 
 var userInput = loop.key.toLowerCase();
    
+// if input key doesn't match anything in the blankArray run this - lives inside loop function
 
 if (word.indexOf(userInput) === -1 ) {
    alert("Incorrect!");
    tries-- ;
 
-// }else if (word.indexOf(userInput) === ) {
-//    blankArray.push(word.indexOf);
+// what to do if userInput = one of the letters in the "word" variable
+
+}else if (a === a) {
+   function(){
+   blankArray.push(word.indexOf);
+   }
 }
 
 console.log(userInput);
 document.getElementById("tries").innerHTML = tries;
 
 }
+
+// end of main game loop function
 
 
 document.getElementById("alphabet").innerHTML = alphabet;
