@@ -29,18 +29,25 @@ for (var i = 0; i < word.length; i++) {
 }
 document.getElementById("blankSlots").innerHTML = blankArray; 
 
-// User input section
+// User input section and main game loop
 
-var userInput = prompt("Word chosen. Please choose a letter");
 
-document.onkeyup = function() {
+document.onkeyup = function(event) {
 
-letter = userInput.toLowerCase();
-if (letter === word[1]) {
-   alert("Hello");
+var userInput = event.key.toLowerCase();
+   alphabet.pull(userInput);
+if (word.indexOf(userInput) === -1 ) {
+   alert("Incorrect!");
+}else {
+   alert("Match");
 }
-};
+console.log(userInput);
+
+}
+document.getElementById("alphabet").innerHTML = alphabet;
+
+
 
 console.log(blankArray);
 console.log(alphabet);
-console.log(userInput);
+
