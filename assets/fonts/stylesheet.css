@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Madness';
+    font-family: 'Belligerent Madness';
     src: url('BelligerentMadness.woff2') format('woff2'),
         url('BelligerentMadness.woff') format('woff');
     font-weight: normal;
@@ -15,22 +15,10 @@
 }
 
 @font-face {
-    font-family: 'Thrones';
+    font-family: 'Game of Thrones';
     src: url('GameofThrones.woff2') format('woff2'),
         url('GameofThrones.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-h1 {
-    font-family: 'Thrones';
-}
-
-p {
-    font-size: 60px;
-    font-family: 'Madness';
-}
-
-#alphabet {
-    font-family: 'Hodor';
-}

@@ -12,7 +12,7 @@
     "crown",
     "hodor",
     "dragon",
-    "white walker",
+    "queen",
     "stark",
     "fire"
  ]
@@ -20,7 +20,7 @@
  var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
  var tries = 6; 
  var guessSlots;
- document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
+ var hangman6 = document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
  var hangman5 = document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
  var hangman4 = document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
  var hangman3 = document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
@@ -37,15 +37,21 @@
 
 var blankArray = [];
 for (var i = 0; i < word.length; i++) {
-   blankArray.push(" _ ");
+   blankArray.push(" - ");
+   var comArray = blankArray;
+   
 }
+
+noComma();
+noCommaAlpha();
+
 
 //visual elements
 
 document.getElementById("tries").innerHTML = tries;
-document.getElementById("blankSlots").innerHTML = blankArray; 
-document.getElementById("alphabet").innerHTML = alphabet;
-document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
+// document.getElementById("blankSlots").innerHTML = blankArray; 
+// document.getElementById("alphabet").innerHTML = alphabet;
+// document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
 // User input section and main game loop
 
 
@@ -55,7 +61,6 @@ var userInput = loop.key.toLowerCase();
 var delAlpha = userInput;
 alpha(delAlpha);
 console.log(alphabet);
-document.getElementById("alphabet").innerHTML = alphabet;
 
 
 
@@ -78,13 +83,14 @@ if (word.indexOf(userInput) === -1 ) {
    for (var i = 0; i < word.length; i++)
     if (word[i] === userInput){
        blankArray.splice([i], 1, userInput);
+       noComma();
        
     
       
        
     }
     
-    document.getElementById("blankSlots").innerHTML = blankArray;
+   //  document.getElementById("blankSlots").innerHTML = blankArray;
    
 
         
@@ -92,21 +98,38 @@ if (word.indexOf(userInput) === -1 ) {
 
 console.log(userInput);
 document.getElementById("tries").innerHTML = tries;
-
 };
+
 
 
 // end of main game loop function
 
-//function to remove used letters on html
+// function to remove used letters on html
 
 function alpha (delAlpha) {
    console.log(delAlpha);
    for (var i = 0; i < alphabet.length; i++)
    if (alphabet[i] === delAlpha) {
    alphabet.splice([i], 1, " ");
+   noCommaAlpha();
    }
    };
+
+// functions to remove commas from arrays
+
+function noComma() {
+   var x = document.getElementById("blankslots2");
+   x.innerHTML = comArray.join(" ");
+   console.log(comArray);
+   };
+
+function noCommaAlpha() {
+   var x = document.getElementById("alphabet");
+   x.innerHTML = alphabet.join(" ");
+   console.log(alphabet);
+   };
+
+// function to change hangman img
 
 function hangmanImg () {
    if (tries === 5)
