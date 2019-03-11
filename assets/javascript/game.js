@@ -111,23 +111,18 @@ function alpha (delAlpha) {
 function hangmanImg () {
    if (tries === 5)
    document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
-
    else if (tries === 4)
-document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
-
-else if (tries === 3)
-document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
-
-else if (tries === 2)
-document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
-
-else if (tries === 1)
-document.getElementById("hangman").src = "./assets/images/hangman5.jpg";
-
-else if (tries === 0)
-document.getElementById("hangman").src = "./assets/images/hangman6.jpg";
-
+   document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
+   else if (tries === 3)
+   document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
+   else if (tries === 2)
+   document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
+   else if (tries === 1)
+   document.getElementById("hangman").src = "./assets/images/hangman5.jpg";
+   else if (tries === 0)
+   document.getElementById("hangman").src = "./assets/images/hangman6.jpg";
 }
+
 
 
 
