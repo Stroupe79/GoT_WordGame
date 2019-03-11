@@ -1,3 +1,7 @@
+
+
+//Game intro
+
 //  var usrName = prompt("What is your name?");
 //  alert("Welcome " + usrName + " to Game of Thrones hangman!");
 
@@ -16,6 +20,7 @@
  var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
  var tries = 5; 
  var guessSlots;
+
  //generates random answer word
 
  var word = words[Math.floor(Math.random() * words.length)];
@@ -43,19 +48,26 @@ var userInput = loop.key.toLowerCase();
 if (word.indexOf(userInput) === -1 ) {
    alert("Incorrect!");
    tries-- ;
+  
 
 // what to do if userInput = one of the letters in the "word" variable
 
-}else if (a === a) {
-   function(){
-   blankArray.push(word.indexOf);
-   }
-}
+}else if (word.includes(userInput)) {
+   for (var i = 0; i < word.length; i++)
+    if (word[i] === userInput){
+       blankArray.splice([i], 1, userInput);
+    }
+    document.getElementById("blankSlots").innerHTML = blankArray;
+
+        
+};
 
 console.log(userInput);
 document.getElementById("tries").innerHTML = tries;
 
-}
+};
+
+// alphabet.pull(userInput);
 
 // end of main game loop function
 
