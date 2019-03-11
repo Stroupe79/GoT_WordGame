@@ -22,8 +22,34 @@
     font-style: normal;
 }
 
+body { 
+    height: 100%;
+    }
+
+.jumbotron {
+    background-image: url('../images/banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.background {
+    background-image: url('../images/banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1 {
     font-family: 'Thrones';
+    color: white;
+    text-align: center;
+    }
+
+#tries {
+    font-size: 100px;
 }
 
 p {
