@@ -18,7 +18,7 @@
  ]
  
  var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
- var tries = 6; 
+ var tries = 5; 
  var guessSlots;
  var hangman6 = document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
  var hangman5 = document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
@@ -47,7 +47,7 @@ noCommaAlpha();
 
 
 //visual elements
-
+document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
 document.getElementById("tries").innerHTML = tries;
 // document.getElementById("blankSlots").innerHTML = blankArray; 
 // document.getElementById("alphabet").innerHTML = alphabet;
