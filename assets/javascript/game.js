@@ -59,8 +59,8 @@ document.onkeyup = function (loop) {
       tries--;
       // hangmanImg(tries);
       if (tries === 0) {
-         alert("Game Over!");
          fadeOutEffect();
+         fadeInEffect();
             
       }
 
@@ -81,9 +81,9 @@ document.onkeyup = function (loop) {
 
    };
 
-   if (word.indexOf(" - ") === -1){
-      fadeOutEffect();
-   }
+   // if (word.indexOf(" - ") === -1){
+   //    fadeOutEffect();
+   // }
 
    console.log(userInput);
    document.getElementById("tries").innerHTML = tries;
@@ -137,6 +137,21 @@ function fadeOutEffect() {
        }
        if (fadeTarget.style.opacity > 0) {
            fadeTarget.style.opacity -= 0.1;
+       } else {
+           clearInterval(fadeEffect);
+       }
+   }, 100);
+   
+}
+
+function fadeInEffect() {
+   var fadeTarget = document.getElementById("lossText");
+   var fadeEffect = setInterval(function () {
+       if (!fadeTarget.style.opacity) {
+           fadeTarget.style.opacity = 1;
+       }
+       if (fadeTarget.style.opacity > 0) {
+           fadeTarget.style.opacity += 0.1;
        } else {
            clearInterval(fadeEffect);
        }
