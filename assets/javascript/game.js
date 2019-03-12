@@ -4,9 +4,8 @@
 
 var words = [
    "SNOW",
-   "THRONE",
-   "DRAGON",
-   "QUEEN",
+   "WATCHMAN",
+   "LEADER",
    "STARK",
    "KING"
 ]
@@ -14,12 +13,6 @@ var words = [
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var tries = 5;
 var guessSlots;
-var hangman6 = document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
-var hangman5 = document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
-var hangman4 = document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
-var hangman3 = document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
-var hangman2 = document.getElementById("hangman").src = "./assets/images/hangman5.jpg";
-var hangman1 = document.getElementById("hangman").src = "./assets/images/hangman6.jpg";
 
 //generates random answer word
 
@@ -67,8 +60,8 @@ document.onkeyup = function (loop) {
       hangmanImg(tries);
       if (tries === 0) {
          alert("Game Over!");
+      
       }
-
 
 
       // what to do if userInput = one of the letters in the "word" variable
@@ -78,10 +71,6 @@ document.onkeyup = function (loop) {
          if (word[i] === userInput) {
             blankArray.splice([i], 1, userInput);
             noComma();
-
-
-
-
          }
 
       //  document.getElementById("blankSlots").innerHTML = blankArray;
@@ -122,6 +111,20 @@ function noCommaAlpha() {
    x.innerHTML = alphabet.join(" ");
    console.log(alphabet);
 };
+
+// function to fade text on win - code from https://stackoverflow.com/questions/31657664/how-to-make-text-fade-out
+
+// function fadeOut() { // start a delay
+//    var fade = document.getElementById(); // get required element
+//    fade.style.opacity = 1; // set opacity for the element to 1
+//    var timerId = setInterval(function() { // start interval loop
+//      var opacity = fade.style.opacity; // get current opacity
+//      if (opacity == 0) { // check if its 0 yet
+//        clearInterval(timerId); // if so, exit from interval loop
+//      } else {
+//        fade.style.opacity = opacity - 0.05; // else remove 0.05 from opacity
+//      };
+
 
 // function to change hangman img
 
