@@ -68,6 +68,13 @@ p {
     font-family: 'Madness';
 }
 
+.button {
+    padding: 0;
+border: none;
+background: none;
+}
+
 #alphabet {
     font-family: 'Hodor';
+    font-size: 50px;
 }

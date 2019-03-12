@@ -34,7 +34,7 @@ noCommaAlpha();
 
 
 //visual elements
-document.getElementById("hangman").src = "./assets/images/crown.png";
+// document.getElementById("hangman").src = "./assets/images/crown.png";
 document.getElementById("tries").innerHTML = tries;
 // document.getElementById("blankSlots").innerHTML = blankArray; 
 // document.getElementById("alphabet").innerHTML = alphabet;
@@ -57,9 +57,11 @@ document.onkeyup = function (loop) {
 
    if (word.indexOf(userInput) === -1) {
       tries--;
-      hangmanImg(tries);
+      // hangmanImg(tries);
       if (tries === 0) {
-         alert("Game Over!");     
+         alert("Game Over!");
+         fadeOutEffect();
+            
       }
 
 
@@ -68,15 +70,20 @@ document.onkeyup = function (loop) {
    } else if (word.includes(userInput)) {
       for (var i = 0; i < word.length; i++)
          if (word[i] === userInput) {
-            blankArray.splice([i], 1, userInput);
+            blankArray.splice([i], 1, userInput);     
             noComma();
-         }
+            
+            }
 
       //  document.getElementById("blankSlots").innerHTML = blankArray;
 
 
 
    };
+
+   if (word.indexOf(" - ") === -1){
+      fadeOutEffect();
+   }
 
    console.log(userInput);
    document.getElementById("tries").innerHTML = tries;
@@ -111,18 +118,32 @@ function noCommaAlpha() {
    console.log(alphabet);
 };
 
-// function to fade text on win - code from https://stackoverflow.com/questions/31657664/how-to-make-text-fade-out
+//function to check for victory condition
 
-// function fadeOut() { // start a delay
-//    var fade = document.getElementById(); // get required element
-//    fade.style.opacity = 1; // set opacity for the element to 1
-//    var timerId = setInterval(function() { // start interval loop
-//      var opacity = fade.style.opacity; // get current opacity
-//      if (opacity == 0) { // check if its 0 yet
-//        clearInterval(timerId); // if so, exit from interval loop
-//      } else {
-//        fade.style.opacity = opacity - 0.05; // else remove 0.05 from opacity
-//      };
+function win() {
+   if ([i] = "W"){
+      fadeOutEffect();
+   }
+}
+
+// function to fade text on win - code from https://stackoverflow.com/questions/29017379/how-to-make-fadeout-effect-with-pure-javascript
+
+
+function fadeOutEffect() {
+   var fadeTarget = document.getElementById("fadeText");
+   var fadeEffect = setInterval(function () {
+       if (!fadeTarget.style.opacity) {
+           fadeTarget.style.opacity = 1;
+       }
+       if (fadeTarget.style.opacity > 0) {
+           fadeTarget.style.opacity -= 0.1;
+       } else {
+           clearInterval(fadeEffect);
+       }
+   }, 100);
+   
+}
+
 
 
 // function to change hangman img
@@ -144,18 +165,18 @@ function noCommaAlpha() {
 // }
 
 //new hangman skull with crown icon
-function hangmanImg() {
-   if (tries === 5)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-   else if (tries === 4)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-   else if (tries === 3)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-   else if (tries === 2)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-   else if (tries === 1)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-   else if (tries === 0)
-      document.getElementById("hangman").src = "./assets/images/crown.png";
-}
+// function hangmanImg() {
+//    if (tries === 5)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+//    else if (tries === 4)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+//    else if (tries === 3)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+//    else if (tries === 2)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+//    else if (tries === 1)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+//    else if (tries === 0)
+//       document.getElementById("hangman").src = "./assets/images/crown.png";
+// }
 
