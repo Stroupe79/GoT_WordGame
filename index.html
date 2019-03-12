@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
-    
+
 </head>
 
-<body>
-        
-<div class="jumbotron">
-    <h1>GAME OF THRONES</h1><br /> 
+<body class="container bg-">
+
+    <div class="jumbotron">
+        <h1>GAME OF THRONES</h1>
         <h1>HANGMAN</h1>
-</div>
-
-<div class="container">
-    
-
-    <div class="border text-center">
-    <p class="bg-white" id="blankslots2"></p>
-</div>
-    
-    <div class = "text-center">
-        <p id="alphabet"></p>
     </div>
-    
-<div class="row">
 
-    <p class="col-md-6" id="tries"></p>
-
-    <img class="text-left" id="hangman" width =100>
-
-</div>
+    <div class="container game-body">
 
 
-    <button type="button" onClick="window.location.reload()">Start Over</button>
+        <div class="text-center text-white">
+            <p class="bg-black" id="blankslots2"></p>
+        </div>
 
-</div>
-   
+        <div class="row text-white ml-3">
+            <div class="col-md-5 text-center">
+                <p id="alphabet"></p>
+
+            </div>
+
+            <!-- <div class="col-md-1"></div> -->
+
+            <div class="col-md-7 text-center">
+                <p id="tries"></p>
+                <p>Tries Remaining</p>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="container center">
+            <div class="row">
+                <button class="button" type="button" onClick="window.location.reload()">Start Over</button>
+                <div class="row">
+                    <img class="text-left" id="hangman" width=100>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
 
 </body>
 
