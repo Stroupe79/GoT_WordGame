@@ -1,21 +1,17 @@
 //Game intro
 
-//  var usrName = prompt("What is your name?");
-//  alert("Welcome " + usrName + " to Game of Thrones hangman!");
-
-
 // variables
 
 var words = [
-   "crown",
-   "hodor",
-   "dragon",
-   "queen",
-   "stark",
-   "fire"
+   "SNOW",
+   "THRONE",
+   "DRAGON",
+   "QUEEN",
+   "STARK",
+   "KING"
 ]
 
-var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var tries = 5;
 var guessSlots;
 var hangman6 = document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
@@ -55,7 +51,7 @@ document.getElementById("tries").innerHTML = tries;
 
 document.onkeyup = function (loop) {
 
-   var userInput = loop.key.toLowerCase();
+   var userInput = loop.key.toUpperCase();
    var delAlpha = userInput;
    alpha(delAlpha);
    console.log(alphabet);
