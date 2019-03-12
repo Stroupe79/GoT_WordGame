@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>GoT - Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
-
+    <link rel="icon" 
+      type="image/png" 
+      href="./assets/images/grey.png">
 </head>
 
 <body class="container bg-">
@@ -38,17 +40,18 @@
                 <p id="tries"></p>
                 <p>Tries Remaining</p>
             </div>
-
+        
+       
         </div>
 
 
-
-
-        <div class="container center">
-            <div class="row">
+        <div class="container col-md-12 text-center">
+                <img class="text-left" id="hangman" height="100">
+        </div>
+        <div class="container col-md-12 text-center mb-3 mt-3">
                 <button class="button" type="button" onClick="window.location.reload()">Start Over</button>
                 <div class="row">
-                    <img class="text-left" id="hangman" width=100>
+                    
                 </div>
             </div>
         </div>

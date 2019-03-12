@@ -34,7 +34,7 @@ noCommaAlpha();
 
 
 //visual elements
-document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
+document.getElementById("hangman").src = "./assets/images/crown.png";
 document.getElementById("tries").innerHTML = tries;
 // document.getElementById("blankSlots").innerHTML = blankArray; 
 // document.getElementById("alphabet").innerHTML = alphabet;
@@ -59,12 +59,11 @@ document.onkeyup = function (loop) {
       tries--;
       hangmanImg(tries);
       if (tries === 0) {
-         alert("Game Over!");
-      
+         alert("Game Over!");     
       }
 
 
-      // what to do if userInput = one of the letters in the "word" variable
+   // what to do if userInput = one of the letters in the "word" variable
 
    } else if (word.includes(userInput)) {
       for (var i = 0; i < word.length; i++)
@@ -128,17 +127,35 @@ function noCommaAlpha() {
 
 // function to change hangman img
 
+// old hangman img loop
+// function hangmanImg() {
+//    if (tries === 5)
+//       document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
+//    else if (tries === 4)
+//       document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
+//    else if (tries === 3)
+//       document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
+//    else if (tries === 2)
+//       document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
+//    else if (tries === 1)
+//       document.getElementById("hangman").src = "./assets/images/hangman5.jpg";
+//    else if (tries === 0)
+//       document.getElementById("hangman").src = "./assets/images/hangman6.jpg";
+// }
+
+//new hangman skull with crown icon
 function hangmanImg() {
    if (tries === 5)
-      document.getElementById("hangman").src = "./assets/images/hangman1.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
    else if (tries === 4)
-      document.getElementById("hangman").src = "./assets/images/hangman2.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
    else if (tries === 3)
-      document.getElementById("hangman").src = "./assets/images/hangman3.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
    else if (tries === 2)
-      document.getElementById("hangman").src = "./assets/images/hangman4.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
    else if (tries === 1)
-      document.getElementById("hangman").src = "./assets/images/hangman5.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
    else if (tries === 0)
-      document.getElementById("hangman").src = "./assets/images/hangman6.jpg";
+      document.getElementById("hangman").src = "./assets/images/crown.png";
 }
+
