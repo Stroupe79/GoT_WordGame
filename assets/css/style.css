@@ -22,6 +22,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Lose';
+    src: url('lose.otf'),
+        url('lose.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     height: 100%;
     background-color: black;
@@ -79,6 +87,7 @@ background: none;
     opacity: 0;
     color: firebrick;
     font-size: 100px;
+    font-family: "Lose";
 }
 
 #alphabet {
