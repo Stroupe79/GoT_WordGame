@@ -42,8 +42,7 @@ body {
     background-repeat: no-repeat;
     /* background-size: cover; */
     padding: 3px;
-    margin-top: 20%;
-    
+        
 }
 
 /* .background {
@@ -94,3 +93,7 @@ background: none;
     font-family: 'Hodor';
     font-size: 55px;
 }
+
+/* @media () {
+
+} */
